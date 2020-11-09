@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         this.yate = new Yate();
-
         this.actualiza();
     }
 
@@ -163,8 +162,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void bautizaConActivity()
     {
+        final Intent DATOS_ENTRADA = new Intent( this, BautizaActivity.class );
+
+        DATOS_ENTRADA.putExtra( "nombre", this.yate.getNombre() );
+
         this.startActivityForResult(
-                new Intent( this, BautizaActivity.class ),
+                DATOS_ENTRADA,
                 REQ_BAUTIZA
         );
     }

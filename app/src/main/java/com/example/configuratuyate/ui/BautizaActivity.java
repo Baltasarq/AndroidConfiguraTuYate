@@ -14,14 +14,20 @@ public class BautizaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bautiza);
+        super.onCreate( savedInstanceState );
+        this.setContentView( R.layout.activity_bautiza );
 
+        // Prepara la vista
         final Button BT_CANCELAR = this.findViewById( R.id.btCancelar );
         final Button BT_GUARDAR = this.findViewById( R.id.btGuardar );
 
         BT_CANCELAR.setOnClickListener( (v) -> BautizaActivity.this.cancela() );
         BT_GUARDAR.setOnClickListener( (v) -> BautizaActivity.this.guarda() );
+
+        // Prepara el estado
+        final EditText ED_NOMBRE = this.findViewById( R.id.edNombre );
+
+        ED_NOMBRE.setText( this.getIntent().getStringExtra( "nombre" ) );
     }
 
     private void cancela()
