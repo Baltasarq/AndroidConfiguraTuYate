@@ -33,13 +33,11 @@ public class BautizaActivity extends AppCompatActivity {
     private void guarda()
     {
         final EditText ED_NOMBRE = this.findViewById( R.id.edNombre );
-        Intent datosRetorno = new Intent();
-        Bundle datos = new Bundle();
+        final Intent DATOS_RETORNO = new Intent();
 
-        datosRetorno.putExtras( datos );
-        datos.putString( "nombre", ED_NOMBRE.getText().toString() );
+        DATOS_RETORNO.putExtra( "nombre", ED_NOMBRE.getText().toString() );
 
-        this.setResult( Activity.RESULT_OK, datosRetorno );
+        this.setResult( Activity.RESULT_OK, DATOS_RETORNO );
         this.finish();
     }
 }
