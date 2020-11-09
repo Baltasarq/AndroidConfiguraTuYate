@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <Button         android:id="@+id/btAcercaDe"
+        android:layout_weight=".1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acerca de..."
+        android:gravity="center_horizontal|center_vertical"
+        />
+
+    <Button         android:id="@+id/btConfigura"
+        android:layout_weight=".1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Configura"
+        android:gravity="center_horizontal|center_vertical"
+    />
+
+    <Button         android:id="@+id/btBautiza"
+        android:layout_weight=".1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bautiza"
+        android:gravity="center_horizontal|center_vertical"
+    />
+
+    <TextView       android:id="@+id/txtYate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_weight=".7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
